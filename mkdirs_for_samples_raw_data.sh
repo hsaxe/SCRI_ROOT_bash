@@ -1,9 +1,9 @@
 #! /bin/bash
 
 # Make directory for raw data
-mkdir -p 001-RawData
+mkdir -p 00-RawData
 
-cd 001-RawData
+cd 00-RawData
 
 # Link over raw data
 ln -s /share/dandekarlab/SCRI-Project_Root_RNA_Seq/* .
@@ -21,4 +21,4 @@ for i in *_R2.fastq.gz; do
 # Make samples.txt for preprocessing with slurm
 cd ..
 
-ls 001-RawData/ | grep -v "FASTQC" > samples.txt
+ls 00-RawData/ | grep -v "FASTQC" > samples.txt
