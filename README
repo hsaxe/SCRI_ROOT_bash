@@ -15,3 +15,6 @@ Slurm script to index the custom genome file.
 
 5) star_alignment_SCRI_ROOT_RNAs._2pass.slurm
 Slurm script to perform alignment of processed reads to custom genome.
+
+6) generate_counts_tbl.sh
+Bash script to generate a counts table of all samples and genes
