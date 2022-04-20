@@ -1,0 +1,20 @@
+This repository contains the scripts used to preprocess and align RNA-seq reads to a genome for publication ""
+
+The order of script execution is as follows:
+1) mkdirs_for_samples_raw_data.sh
+This code makes the directories for both reads of each sample and makes a sample.txt containing all the sample names. This is used for preprocessing.
+
+2) hts_preproc_SCRI_ROOT_RNAs.slurm
+This slurm script runs the entire preprocessing pipeline.
+
+3) References/rbind_genomes.sh
+This script is mainly for documentation purposes. It combines the .fna and .gtf files for the J. microcarpa and J. regia genomes.
+
+4) star_index_combined_genomes.slurm
+Slurm script to index the custom genome file.
+
+5) star_alignment_SCRI_ROOT_RNAs._2pass.slurm
+Slurm script to perform alignment of processed reads to custom genome.
+
+6) generate_counts_tbl.sh
+Bash script to generate a counts table of all samples and genes
